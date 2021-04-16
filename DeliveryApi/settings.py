@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jyfel)(!u4cwmi-gny3x#4y$&us*2=sp!0^vh)xkxd3@d7^*7b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['178.128.133.96']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -143,6 +143,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = Path(BASE_DIR).joinpath('staticfiles')
+STATICFILES_DIRS = (Path(BASE_DIR).joinpath('static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
