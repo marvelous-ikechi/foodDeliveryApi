@@ -1,0 +1,1 @@
+from rest_framework.permissions import BasePermissionclass UserIsOwner(BasePermission):    def has_object_permission(self, request, view, obj):        user = getattr(obj, 'user', None)        if not user:            user = getattr(obj, 'market').user        if user:            return user == request.user        else:            return False

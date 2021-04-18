@@ -51,7 +51,9 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     # local apps
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'market',
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'market.middleware.MarketMiddleware',
 ]
 
 ROOT_URLCONF = 'DeliveryApi.urls'
@@ -121,13 +124,6 @@ WSGI_APPLICATION = 'DeliveryApi.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation

@@ -1,0 +1,1 @@
+from rest_framework.routers import DefaultRouterfrom market.views import MarketViewSet, CategoryViewsetfrom order.views import CatalogueViewSet, OrderViewSetrouter = DefaultRouter()router.register(r'markets', MarketViewSet)router.register(r'categories', CategoryViewset)router.register(r'catalogues', CatalogueViewSet)router.register(r'orders', OrderViewSet)
