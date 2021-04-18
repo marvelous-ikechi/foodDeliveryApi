@@ -1,1 +1,0 @@
-from rest_framework import viewsetsfrom market.permissions import UserIsOwnerclass BaseModelViewset(viewsets.ModelViewSet):    def get_permissions(self):        if self.action == "create":            self.permission_classes = [UserIsOwner]        return super(BaseModelViewset, self).get_permissions()
