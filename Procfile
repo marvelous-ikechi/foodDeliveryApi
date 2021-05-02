@@ -1,1 +1,1 @@
-web: gunicorn foodDeliveryApi.wsgi
+web: gunicorn DeliveryApi.wsgi
